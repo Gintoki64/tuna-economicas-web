@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cancionero - Tuna de Económicas</title>
+  <link rel="icon" type="image/png" href="images/Escudo RRSS/Logo nuevo tuna.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cancionero.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar scrolled">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/orangecrush.png" alt="Tuna de Económicas">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Volver al inicio</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Password Overlay -->
+  <div class="password-overlay" id="password-overlay">
+    <div class="password-modal">
+      <h2>Acceso al <span class="accent">Cancionero</span></h2>
+      <p>Introduce la contraseña para acceder</p>
+      <input type="password" id="password-input" placeholder="Contraseña" autocomplete="off">
+      <button class="btn-cta" id="password-btn">Entrar</button>
+      <p class="password-error" id="password-error">Contraseña incorrecta</p>
+    </div>
+  </div>
+
+  <!-- Main Content (hidden until authenticated) -->
+  <main class="cancionero-main" id="cancionero-main" style="display:none;">
+    <div class="container">
+      <h1 class="section-title">Cancion<span class="accent">ero</span></h1>
+      <div class="cancionero-search-wrapper">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+          <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+        </svg>
+        <input type="text" class="cancionero-search" id="search-input" placeholder="Buscar canción...">
+      </div>
+      <div class="songs-container" id="songs-container">
+        <p class="songs-loading">Cargando canciones...</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="cancionero.js"></script>
+</body>
+</html>
