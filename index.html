@@ -3,226 +3,286 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tuna de Económicas</title>
-  <link rel="icon" type="image/png" href="images/Escudo RRSS/Logo nuevo tuna.png">
+  <title>Tuna de Económicas de Sevilla · Serenatas, bodas y eventos</title>
+  <meta name="description" content="Tuna de la Facultad de Ciencias Económicas de Sevilla. Serenatas, bodas, pedidas de mano, cumpleaños y eventos. Pide información por WhatsApp o únete a la tuna.">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tuna de Económicas de Sevilla">
+  <meta property="og:description" content="Serenatas, bodas, pedidas de mano y eventos. Pide información por WhatsApp.">
+  <meta property="og:image" content="https://gintoki64.github.io/tuna-economicas-web/images/opt/og.jpg">
+  <meta property="og:locale" content="es_ES">
+  <link rel="icon" type="image/png" href="images/opt/favicon.png">
+  <link rel="apple-touch-icon" href="images/opt/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Yellowtail&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/opt/hero.jpg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#inicio" class="nav-logo">
-        <img src="images/orangecrush.png" alt="Tuna de Económicas">
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="Menú">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
-        <li><a href="#multimedia">Multimedia</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-        <li><a href="#redes-sociales">Redes Sociales</a></li>
-        <li><a href="cancionero.html">Cancionero</a></li>
-      </ul>
-    </div>
-  </nav>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <!-- Hero Section -->
-  <section class="hero" id="inicio">
-    <div class="hero-overlay"></div>
-    <div class="hero-content fade-in">
-      <h1>Tuna de Económicas</h1>
-      <p class="hero-subtitle">Donde la tradición se encuentra con la melodía</p>
-      <a href="#multimedia" class="btn-cta">Ver vídeos</a>
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo" aria-label="Tuna de Económicas, inicio">
+        <img src="images/opt/escudo-160.png" alt="" width="44" height="44">
+        <span>Tuna de <strong>Económicas</strong></span>
+      </a>
+      <nav aria-label="Principal">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#actuaciones">Actuaciones</a></li>
+          <li><a href="#videos">Vídeos</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#unete">Únete</a></li>
+          <li><a href="cancionero.html">Cancionero</a></li>
+          <li class="nav-cta-item"><a href="#contacto" class="btn btn-primary btn-sm">Contrátanos</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <p class="eyebrow">Facultad de Ciencias Económicas · Sevilla</p>
+      <h1>Tuna de <span class="hero-accent">Económicas</span></h1>
+      <p class="hero-subtitle">Serenatas, rondas y pasacalles con capa, beca y bandurria. Llevamos la tradición tunera a tu boda, tu pedida o tu fiesta.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/34680913100" data-wa="Hola, quería información para contratar a la tuna. Tipo de evento: … Fecha: … Lugar: …" class="btn btn-primary" target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg>
+          Contrátanos
+        </a>
+        <a href="#unete" class="btn btn-ghost">Únete a la tuna</a>
+      </div>
+    </div>
+    <a href="#nosotros" class="hero-scroll" aria-label="Bajar a Nosotros">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="28" height="28"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z" fill="currentColor"/></svg>
+    </a>
   </section>
 
-  <!-- Sobre Nosotros -->
-  <section class="section sobre-nosotros" id="sobre-nosotros">
-    <div class="container">
-      <h2 class="section-title fade-in">Sobre <span class="accent">Nosotros</span></h2>
-      <div class="about-grid">
-        <div class="about-text fade-in">
+  <main id="contenido">
+
+    <!-- Nosotros -->
+    <section class="section nosotros" id="nosotros">
+      <div class="container nosotros-grid">
+        <div class="nosotros-text reveal">
+          <p class="eyebrow">Quiénes somos</p>
+          <h2 class="section-title">Tradición que <span class="script">suena</span></h2>
           <p>
-            La Tuna de Económicas es una agrupación musical universitaria con una larga tradición
-            de alegría, compañerismo y pasión por la música. Formada por estudiantes y antiguos
-            alumnos de la Facultad de Ciencias Económicas, nuestra tuna mantiene viva una de las
+            La Tuna de Económicas es una agrupación musical universitaria formada por estudiantes
+            y antiguos alumnos de la Facultad de Ciencias Económicas. Mantenemos viva una de las
             costumbres más emblemáticas de la vida universitaria española.
           </p>
           <p>
-            Con nuestras capas, becas y bandurrias, recorremos calles, facultades y escenarios
-            llevando serenatas, pasacalles y actuaciones que combinan el humor, la tradición y el
-            talento musical. Cada nota que tocamos es un homenaje a siglos de historia de tuna.
+            Con nuestras capas, becas y bandurrias recorremos calles, facultades y escenarios con
+            serenatas, pasacalles y actuaciones que mezclan humor, tradición y música.
           </p>
-          <p>
-            Si sientes la música en el alma y buscas una experiencia universitaria inolvidable,
-            ¡únete a nosotros!
-          </p>
+          <ul class="nosotros-stats">
+            <li><strong>Serenatas</strong><span>a quien tú quieras</span></li>
+            <li><strong>Rondas</strong><span>y pasacalles</span></li>
+            <li><strong>Certámenes</strong><span>y escenarios</span></li>
+          </ul>
         </div>
-        <div class="about-image fade-in">
-          <img src="images/Escudo RRSS/Logo nuevo tuna.png" alt="Escudo Tuna de Económicas">
-        </div>
+        <figure class="nosotros-photo reveal">
+          <img src="images/opt/photo_2026-02-15_21-02-15-thumb.jpg" alt="Tunos de Económicas tocando guitarra y bandurria en una foto antigua" width="592" height="595" loading="lazy">
+          <figcaption>Tunos de ayer y de hoy.</figcaption>
+        </figure>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Multimedia -->
-  <section class="section multimedia" id="multimedia">
-    <div class="container">
-      <h2 class="section-title fade-in">Multi<span class="accent">media</span></h2>
-      <div class="video-grid fade-in">
-        <a href="https://www.youtube.com/watch?v=8labRiLoCXw" target="_blank" rel="noopener noreferrer" class="video-wrapper video-thumb">
-          <img src="https://img.youtube.com/vi/8labRiLoCXw/hqdefault.jpg" alt="Tuna de Económicas - Vídeo 1">
-          <div class="play-btn" aria-label="Reproducir en YouTube">
-            <svg viewBox="0 0 68 48" width="68" height="48">
-              <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.13 13.05 0 24 0 24s.13 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.87 34.95 68 24 68 24s-.13-10.95-1.48-16.26z" fill="#FF0000"/>
-              <path d="M45 24L27 14v20" fill="#fff"/>
-            </svg>
-          </div>
-        </a>
-        <a href="https://www.youtube.com/watch?v=1SepLWzqCaw" target="_blank" rel="noopener noreferrer" class="video-wrapper video-thumb">
-          <img src="https://img.youtube.com/vi/1SepLWzqCaw/hqdefault.jpg" alt="Tuna de Económicas - Vídeo 2">
-          <div class="play-btn" aria-label="Reproducir en YouTube">
-            <svg viewBox="0 0 68 48" width="68" height="48">
-              <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.13 13.05 0 24 0 24s.13 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.87 34.95 68 24 68 24s-.13-10.95-1.48-16.26z" fill="#FF0000"/>
-              <path d="M45 24L27 14v20" fill="#fff"/>
-            </svg>
-          </div>
-        </a>
-      </div>
-      <div class="youtube-link fade-in">
-        <a href="https://youtube.com/@tunaceyesevilla?si=iv1qffM3kGs6RWZc" target="_blank" rel="noopener noreferrer" class="btn-cta btn-outline">
-          Ver más en YouTube
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Galería -->
-  <section class="section galeria" id="galeria">
-    <div class="container">
-      <h2 class="section-title fade-in">Gale<span class="accent">ría</span></h2>
-      <div class="gallery-grid fade-in">
-        <div class="gallery-item">
-          <img src="images/imagenesGaleria/photo_2026-02-15_20-56-15.jpg" alt="Tuna de Económicas">
-          <div class="gallery-overlay"></div>
+    <!-- Actuaciones -->
+    <section class="section actuaciones" id="actuaciones">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Contrata a la tuna</p>
+          <h2 class="section-title">¿Qué <span class="script">celebras</span>?</h2>
+          <p class="section-lead">Cuéntanos el evento, la fecha y el lugar, y te respondemos sin compromiso.</p>
         </div>
-        <div class="gallery-item">
-          <img src="images/imagenesGaleria/photo_2026-02-15_21-02-05.jpg" alt="Tuna de Económicas">
-          <div class="gallery-overlay"></div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/imagenesGaleria/photo_2026-02-15_21-02-08.jpg" alt="Tuna de Económicas">
-          <div class="gallery-overlay"></div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/imagenesGaleria/photo_2026-02-15_21-02-12.jpg" alt="Tuna de Económicas">
-          <div class="gallery-overlay"></div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/imagenesGaleria/photo_2026-02-15_21-02-15.jpg" alt="Tuna de Económicas">
-          <div class="gallery-overlay"></div>
-        </div>
-        <div class="gallery-item gallery-video">
-          <video src="images/imagenesGaleria/video_2026-02-15_21-02-48.mp4" muted loop preload="metadata"></video>
-          <div class="gallery-overlay"></div>
-          <div class="gallery-play-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40">
-              <path d="M8 5v14l11-7z"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contacto -->
-  <section class="section contacto" id="contacto">
-    <div class="container">
-      <h2 class="section-title fade-in">Cont<span class="accent">acto</span></h2>
-      <div class="contacto-content fade-in">
-        <p class="contacto-desc">
-          ¿Quieres que amenicemos tu <strong>boda</strong>, <strong>cumpleaños</strong>, <strong>comunión</strong>, <strong>pedida de mano</strong>...?
-          Llámanos sin compromiso y te informamos de todo.
-        </p>
-        <div class="contacto-phones">
-          <a href="tel:+34680913100" class="btn-cta btn-phone">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-              <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1.003 1.003 0 0 1 1.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/>
-            </svg>
-            680 913 100
+        <div class="services-grid">
+          <a class="service-card reveal" href="https://wa.me/34680913100" data-wa="Hola, quería información para que la tuna toque en una boda. Fecha: … Lugar: …" target="_blank" rel="noopener">
+            <svg class="service-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21.35 10.55 20C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08A6 6 0 0 1 16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"/></svg>
+            <h3>Bodas</h3>
+            <p>Ceremonia, cóctel o banquete. Sorprende a los novios y a los invitados.</p>
+            <span class="service-link">Pedir información →</span>
           </a>
-          <a href="tel:+34690253344" class="btn-cta btn-phone">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-              <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1.003 1.003 0 0 1 1.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/>
-            </svg>
-            690 253 344
+          <a class="service-card reveal" href="https://wa.me/34680913100" data-wa="Hola, quería información para una pedida de mano con la tuna. Fecha: … Lugar: …" target="_blank" rel="noopener">
+            <svg class="service-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2 9 6h6zm0 6a7 7 0 1 0 0 14 7 7 0 0 0 0-14m0 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10"/></svg>
+            <h3>Pedidas de mano</h3>
+            <p>La serenata de siempre para el momento más importante.</p>
+            <span class="service-link">Pedir información →</span>
+          </a>
+          <a class="service-card reveal" href="https://wa.me/34680913100" data-wa="Hola, quería información para una serenata o cumpleaños con la tuna. Fecha: … Lugar: …" target="_blank" rel="noopener">
+            <svg class="service-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3z"/></svg>
+            <h3>Serenatas y cumpleaños</h3>
+            <p>Bajo el balcón, en casa o en el restaurante. Tú eliges dónde.</p>
+            <span class="service-link">Pedir información →</span>
+          </a>
+          <a class="service-card reveal" href="https://wa.me/34680913100" data-wa="Hola, quería información para que la tuna actúe en un evento (comunión, empresa, fiesta…). Fecha: … Lugar: …" target="_blank" rel="noopener">
+            <svg class="service-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5C15 14.17 10.33 13 8 13m8 0c-.29 0-.62.02-.97.05A4.2 4.2 0 0 1 17 16.5V19h6v-2.5c0-2.33-4.67-3.5-7-3.5"/></svg>
+            <h3>Comuniones y eventos</h3>
+            <p>Fiestas privadas, empresas y celebraciones de todo tipo.</p>
+            <span class="service-link">Pedir información →</span>
           </a>
         </div>
-        <a href="mailto:ceyesevilla@gmail.com" class="btn-cta btn-outline btn-phone contacto-email">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-          </svg>
-          ceyesevilla@gmail.com
-        </a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Redes Sociales -->
-  <section class="section redes-sociales" id="redes-sociales">
-    <div class="container">
-      <h2 class="section-title fade-in">Redes <span class="accent">Sociales</span></h2>
-      <div class="social-icons fade-in">
-        <!-- YouTube -->
-        <a href="https://youtube.com/@tunaceyesevilla?si=iv1qffM3kGs6RWZc" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="48" height="48">
-            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-          </svg>
-        </a>
-        <!-- TikTok -->
-        <a href="https://www.tiktok.com/@tunaceye?_r=1&_t=ZN-93wxkMKN5HS" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="48" height="48">
-            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
-          </svg>
-        </a>
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/tunaceye?igsh=cmRzZnVrcDBubjE3" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="48" height="48">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
-          </svg>
-        </a>
-        <!-- Facebook -->
-        <a href="https://www.facebook.com/share/1E34b7Jfmj/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="48" height="48">
-            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-          </svg>
+    <!-- Vídeos -->
+    <section class="section videos" id="videos">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Escúchanos</p>
+          <h2 class="section-title">En <span class="script">directo</span></h2>
+        </div>
+        <div class="video-grid">
+          <button class="video-thumb reveal" type="button" data-yt="8labRiLoCXw" aria-label="Reproducir vídeo 1 de la Tuna de Económicas">
+            <img src="https://i.ytimg.com/vi/8labRiLoCXw/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
+            <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="34" height="34"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+          </button>
+          <button class="video-thumb reveal" type="button" data-yt="1SepLWzqCaw" aria-label="Reproducir vídeo 2 de la Tuna de Económicas">
+            <img src="https://i.ytimg.com/vi/1SepLWzqCaw/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
+            <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="34" height="34"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+          </button>
+        </div>
+        <div class="center reveal">
+          <a href="https://youtube.com/@tunaceyesevilla" target="_blank" rel="noopener" class="btn btn-ghost">Más vídeos en YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="section galeria" id="galeria">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Galería</p>
+          <h2 class="section-title">De <span class="script">ronda</span></h2>
+        </div>
+        <div class="gallery-grid reveal" id="gallery">
+          <button type="button" class="gallery-item" data-full="images/imagenesGaleria/photo_2026-02-15_20-56-15.jpg" aria-label="Ampliar: actuación en el escenario">
+            <img src="images/opt/photo_2026-02-15_20-56-15-thumb.jpg" alt="La tuna actuando en un escenario" width="600" height="338" loading="lazy">
+          </button>
+          <button type="button" class="gallery-item" data-full="images/imagenesGaleria/photo_2026-02-15_21-02-05.jpg" aria-label="Ampliar: cartel de la fiesta de la tuna">
+            <img src="images/opt/photo_2026-02-15_21-02-05-thumb.jpg" alt="Cartel de la Fiesta de la Tuna de Económicas" width="450" height="600" loading="lazy">
+          </button>
+          <button type="button" class="gallery-item" data-full="images/imagenesGaleria/photo_2026-02-15_21-02-12.jpg" aria-label="Ampliar: la tuna en una terraza">
+            <img src="images/opt/photo_2026-02-15_21-02-12-thumb.jpg" alt="Tunos posando en una terraza con guitarra" width="600" height="338" loading="lazy">
+          </button>
+          <button type="button" class="gallery-item" data-full="images/imagenesGaleria/photo_2026-02-15_21-02-15.jpg" aria-label="Ampliar: foto antigua de la tuna">
+            <img src="images/opt/photo_2026-02-15_21-02-15-thumb.jpg" alt="Foto antigua de tunos tocando" width="592" height="595" loading="lazy">
+          </button>
+          <button type="button" class="gallery-item" data-full="images/imagenesGaleria/photo_2026-02-15_21-02-08.jpg" aria-label="Ampliar: comida de la tuna">
+            <img src="images/opt/photo_2026-02-15_21-02-08-thumb.jpg" alt="Tunos en una comida con servilletas en la cabeza" width="277" height="600" loading="lazy">
+          </button>
+          <button type="button" class="gallery-item gallery-video" data-video="images/imagenesGaleria/video_2026-02-15_21-02-48.mp4" aria-label="Reproducir vídeo de la galería">
+            <video src="images/imagenesGaleria/video_2026-02-15_21-02-48.mp4#t=0.5" muted playsinline preload="metadata"></video>
+            <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Únete -->
+    <section class="unete" id="unete">
+      <div class="unete-bg" aria-hidden="true"></div>
+      <div class="container unete-content reveal">
+        <p class="eyebrow">Únete</p>
+        <h2 class="section-title">¿Sientes la música <span class="script">en el alma?</span></h2>
+        <p>Si estudias o has estudiado en Económicas y quieres vivir la universidad de otra manera, entra en la tuna. Escríbenos y te contamos cómo.</p>
+        <a href="https://wa.me/34680913100" data-wa="Hola, me gustaría entrar en la Tuna de Económicas. ¿Cómo puedo apuntarme?" class="btn btn-primary" target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg>
+          Quiero entrar
         </a>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section contacto" id="contacto">
+      <div class="container contacto-grid">
+        <div class="reveal">
+          <p class="eyebrow">Contacto</p>
+          <h2 class="section-title">Hablemos de tu <span class="script">fiesta</span></h2>
+          <p class="section-lead">Escríbenos por WhatsApp con el tipo de evento, la fecha y el lugar. Si lo prefieres, llámanos.</p>
+        </div>
+        <div class="contacto-card reveal">
+          <a href="https://wa.me/34680913100" data-wa="Hola, quería información para contratar a la tuna. Tipo de evento: … Fecha: … Lugar: …" class="btn btn-primary btn-block" target="_blank" rel="noopener">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-wa"/></svg>
+            Escribir por WhatsApp
+          </a>
+          <div class="contacto-phones">
+            <a href="tel:+34680913100" class="btn btn-ghost">
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-phone"/></svg>
+              680 913 100
+            </a>
+            <a href="tel:+34690253344" class="btn btn-ghost">
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><use href="#i-phone"/></svg>
+              690 253 344
+            </a>
+          </div>
+          <a href="mailto:ceyesevilla@gmail.com" class="contacto-email">o escríbenos a ceyesevilla@gmail.com</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <p><span class="accent">Tuna de Económicas</span> &copy; <span id="year"></span>. Todos los derechos reservados.</p>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/opt/orangecrush-120.png" alt="Orange Crush, @tunaceye" width="72" height="72" loading="lazy">
+        <p>Tuna de Económicas de Sevilla</p>
+      </div>
+      <ul class="social-icons" aria-label="Redes sociales">
+        <li><a href="https://www.instagram.com/tunaceye" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0m0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32M12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8m6.41-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88"/></svg>
+        </a></li>
+        <li><a href="https://www.tiktok.com/@tunaceye" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03a10.7 10.7 0 0 1-5.82-1.9c-.01 2.92.01 5.84-.02 8.75a7.6 7.6 0 0 1-1.35 3.94 7.5 7.5 0 0 1-5.91 3.21 7.4 7.4 0 0 1-4.08-1.03 7.5 7.5 0 0 1-3.65-5.71c-.02-.5-.03-1-.01-1.49a7.5 7.5 0 0 1 8.73-6.68c.02 1.48-.04 2.96-.04 4.44a3.4 3.4 0 0 0-4.52 2.12c-.21.51-.15 1.07-.14 1.61a3.4 3.4 0 0 0 6.27 1.26c.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07"/></svg>
+        </a></li>
+        <li><a href="https://youtube.com/@tunaceyesevilla" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M23.5 6.19a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3 3 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3 3 0 0 0 2.12 2.14c1.87.5 9.38.5 9.38.5s7.5 0 9.38-.5a3 3 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81M9.55 15.57V8.43L15.82 12z"/></svg>
+        </a></li>
+        <li><a href="https://www.facebook.com/share/1E34b7Jfmj/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M24 12.07C24 5.45 18.63.07 12 .07S0 5.45 0 12.07c0 5.99 4.39 10.95 10.13 11.85v-8.38H7.08v-3.47h3.05V9.43c0-3.01 1.79-4.67 4.53-4.67 1.31 0 2.69.24 2.69.24v2.95h-1.51c-1.49 0-1.96.93-1.96 1.88v2.25h3.33l-.53 3.47h-2.8v8.38C19.61 23.03 24 18.06 24 12.07"/></svg>
+        </a></li>
+      </ul>
+      <p class="footer-copy">&copy; <span id="year">2026</span> Tuna de Económicas · <a href="cancionero.html">Cancionero (tunos)</a></p>
     </div>
   </footer>
 
-  <!-- Botón volver arriba -->
-  <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
-    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
-    </svg>
-  </button>
+  <!-- Barra de contacto fija (móvil) -->
+  <div class="mobile-bar" id="mobile-bar" aria-label="Contacto rápido">
+    <a href="tel:+34680913100" class="mobile-bar-call">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-phone"/></svg>
+      Llamar
+    </a>
+    <a href="https://wa.me/34680913100" data-wa="Hola, quería información para contratar a la tuna. Tipo de evento: … Fecha: … Lugar: …" class="mobile-bar-wa" target="_blank" rel="noopener">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-wa"/></svg>
+      WhatsApp
+    </a>
+  </div>
+
+  <!-- Visor de galería -->
+  <dialog class="lightbox" id="lightbox" aria-label="Visor de imágenes">
+    <button type="button" class="lb-close" aria-label="Cerrar">&times;</button>
+    <button type="button" class="lb-nav lb-prev" aria-label="Anterior">&#8249;</button>
+    <div class="lb-stage" id="lb-stage"></div>
+    <button type="button" class="lb-nav lb-next" aria-label="Siguiente">&#8250;</button>
+    <p class="lb-counter" id="lb-counter"></p>
+  </dialog>
+
+  <!-- Iconos reutilizables -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.01c0-5.2 4.23-9.43 9.44-9.43a9.4 9.4 0 0 1 9.43 9.44c0 5.2-4.23 9.43-9.44 9.43m8.03-17.47A11.3 11.3 0 0 0 12.05.7C5.79.7.7 5.79.7 12.04c0 2 .52 3.95 1.52 5.66L.6 23.6l6.04-1.58a11.3 11.3 0 0 0 5.41 1.38h.01c6.25 0 11.34-5.09 11.35-11.34 0-3.03-1.18-5.88-3.33-8.03"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79a15 15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02z"/></symbol>
+  </svg>
 
   <script src="script.js"></script>
 </body>

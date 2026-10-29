@@ -1,6 +1,6 @@
 // ===== Configuration =====
 const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyEvxWj0iBW_X2M8i7PZT5SPxCyQOrKajLtGLgguIiiKxX6j0puPBRJETKP5nXcrdNDHg/exec';
-const PASSWORD_HASH = 'cb958eaf5414ae49c54a02827a13c7ed12ccd109a7263b38a00bdf40a29d3c85';
+const PASSWORD_HASH = 'd0831be887ef7f9c740cb3f8a721a4bc4fe5d644b9b327f9cbd442999d1c2bdc';
 
 // ===== DOM Elements =====
 const overlay = document.getElementById('password-overlay');
@@ -57,6 +57,10 @@ passwordInput.addEventListener('keydown', (e) => {
 });
 
 // ===== Songs =====
+function escapeHTML(text) {
+  return String(text).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
 async function loadSongs() {
   try {
     const response = await fetch(APPS_SCRIPT_URL);
@@ -77,7 +81,7 @@ function renderSongs(songs) {
   songsContainer.innerHTML = songs.map(song => {
     const audioHTML = song.mp3
       ? `<div class="song-audio">
-           <iframe src="https://drive.google.com/file/d/${song.mp3}/preview" allow="autoplay" class="audio-iframe"></iframe>
+           <iframe src="https://drive.google.com/file/d/${song.mp3}/preview" allow="autoplay" class="audio-iframe" loading="lazy" title="Audio de ${escapeHTML(song.name)}"></iframe>
          </div>`
       : '<span class="song-no-audio">Sin audio</span>';
 
@@ -102,7 +106,7 @@ function renderSongs(songs) {
         <div class="song-pdfs-list">
           ${pdfs.map(p =>
             `<a href="https://drive.google.com/file/d/${p.id}/preview" target="_blank" rel="noopener noreferrer" class="song-pdf-item">
-              ${pdfIcon} ${p.name}
+              ${pdfIcon} ${escapeHTML(p.name)}
             </a>`
           ).join('')}
         </div>
@@ -110,7 +114,7 @@ function renderSongs(songs) {
     }
 
     return `<div class="song-card">
-      <span class="song-name">${song.name}</span>
+      <span class="song-name">${escapeHTML(song.name)}</span>
       ${audioHTML}
       ${pdfHTML}
     </div>`;

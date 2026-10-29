@@ -24,8 +24,8 @@
 }
 
 .password-modal h2 {
-  font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
+  font-weight: 800;
   margin-bottom: 10px;
 }
 
@@ -42,8 +42,8 @@
   border-radius: 50px;
   background: var(--negro);
   color: var(--blanco);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
+    font-size: 1rem;
+  font-family: inherit;
   outline: none;
   transition: border-color 0.3s ease;
   margin-bottom: 20px;
@@ -75,6 +75,7 @@
 /* Main Content */
 .cancionero-main {
   padding-top: 120px;
+  text-align: left;
   padding-bottom: 80px;
   min-height: 100vh;
 }
@@ -104,8 +105,8 @@
   border-radius: 50px;
   background: var(--negro-card);
   color: var(--blanco);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
+    font-size: 1rem;
+  font-family: inherit;
   outline: none;
   transition: border-color 0.3s ease;
 }
@@ -180,8 +181,7 @@
   border: 1px solid var(--naranja);
   color: var(--naranja);
   border-radius: 50px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
+    font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
@@ -192,7 +192,7 @@
 
 .song-pdf:hover {
   background: var(--naranja);
-  color: var(--blanco);
+  color: var(--negro);
 }
 
 /* Multiple PDFs dropdown */
@@ -210,8 +210,7 @@
   border: 1px solid var(--naranja);
   color: var(--naranja);
   border-radius: 50px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
+    font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
@@ -220,7 +219,7 @@
 
 .song-pdfs-toggle:hover {
   background: var(--naranja);
-  color: var(--blanco);
+  color: var(--negro);
 }
 
 .dropdown-arrow {
@@ -258,8 +257,7 @@
   padding: 10px 16px;
   color: var(--blanco);
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
+    font-size: 0.85rem;
   border-radius: 8px;
   transition: background 0.2s ease;
   white-space: nowrap;
@@ -308,4 +306,14 @@
   .password-modal {
     padding: 40px 25px;
   }
+}
+
+.cancionero-main .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* La barra queda por encima del acceso para poder volver al inicio */
+.navbar {
+  z-index: 2100;
 }
